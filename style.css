@@ -8,17 +8,28 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid black;
+    table-layout: auto; 
 }
 
 th, td {
+    border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
-thead {
+th {
     background-color: #f2f2f2;
 }
+
+
+th:nth-child(1) {
+    width: 50%; 
+}
+
+th:nth-child(2), th:nth-child(3) {
+    width: 25%; 
+}
+
