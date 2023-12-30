@@ -8,5 +8,18 @@ async function fetchlist() {
     }
 }
 
+function display(products) {
+    const tableBody = document.querySelector("#product-table tbody");
+    products.forEach(product => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${product.title}</td>
+            <td>${product.price}</td>
+            <td>${product.popularity}</td>
+        `;
+        tableBody.appendChild(row);
+    });
+}
+
 
 fetchlist().then(display);
